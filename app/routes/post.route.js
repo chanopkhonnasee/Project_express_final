@@ -3,7 +3,7 @@ var post = require('../controllers/post.controller');
 module.exports = (app) => {
        var path = '/api/post';
     
-       app.get(path + '/delete/:id',post.deletePost)
+       app.delete(path + '/delete/:id',post.deletePost)
        
        app.get(path + '/search/:search', post.search);
        

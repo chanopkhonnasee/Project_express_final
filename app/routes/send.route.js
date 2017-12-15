@@ -3,7 +3,7 @@ var send = require('../controllers/send.controller');
 module.exports = (app) => {
        var path = '/api/send';
     
-       app.get(path + '/delete/:id',send.deletePost)
+       app.delete(path + '/delete/:id',send.deletePost)
        
        app.get(path + '/search/:search', send.search);
       
