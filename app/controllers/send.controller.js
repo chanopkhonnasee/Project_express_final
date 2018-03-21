@@ -41,7 +41,7 @@ exports.deletePost = (req, res, next) => {
 
 exports.search = (req, res, next) => {
            
-            Send.find({content:{ $regex:req.params.search}}, (err, data) => {
+            Send.find({title:{ $regex:req.params.search}}, (err, data) => {
                   if (err) {
                          console.log('Failure: ' + err);
                          return next(err);
